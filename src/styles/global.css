@@ -35,7 +35,8 @@ img, svg, video { max-width: 100%; display: block; }
 .container { width: min(1100px, 92%); margin-inline: auto; }
 .header { position: sticky; top: 0; backdrop-filter: blur(6px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom: 1px solid var(--border); z-index: 50; }
 .header-inner { display:flex; align-items:center; justify-content:space-between; gap: 12px; padding: 12px 0; }
-.brand { display:flex; align-items:center; gap:10px; font-weight: 700; letter-spacing: .2px; }
+.brand { display:flex; align-items:center; gap:10px; font-weight: 700; letter-spacing: .2px; color: var(--text); text-decoration: none; }
+.brand:hover { color: var(--accent); }
 .brand svg { width: 26px; height: 26px; }
 .nav-cta { display:flex; gap: 10px; align-items:center; }
 main { display:block; }
@@ -67,6 +68,8 @@ ul.crosses li::marker { content: "❌ "; }
 .table caption { text-align: left; font-weight: 700; margin-bottom: 8px; }
 .badge { display:inline-block; padding: 4px 8px; border-radius: 999px; background: color-mix(in oklab, var(--accent) 14%, transparent); color: var(--accent-700); font-weight: 700; font-size: .8rem; }
 .muted { color: var(--muted); }
+.muted a { color: var(--accent); text-decoration: none; font-weight: 600; transition: color .2s ease; }
+.muted a:hover { color: var(--accent-700); }
 footer { border-top: 1px solid var(--border); margin-top: 40px; }
 .footer-inner { padding: 22px 0; display:flex; justify-content:space-between; gap: 10px; align-items:center; flex-wrap: wrap; }
 .skip-link { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
