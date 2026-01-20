@@ -1,0 +1,143 @@
+1️⃣ HERO SECTION
+
+H1:
+Uncover Real-Time AI Search Queries from ChatGPT & Claude – Chrome Extension
+
+Sous-titre:
+The #1 Chrome extension to reveal, track, and export real-time AI search queries. Gain an unfair SEO advantage and optimize content by seeing exactly how ChatGPT and Claude browse the web.
+
+CTA Principal:
+→ Add to Chrome – Free Forever
+
+CTA Secondaire:
+→ Watch 1-Min Demo
+
+
+
+2️⃣ LE PROBLÈME
+
+H2:
+Traditional SEO Tools Can’t Track AI Search Behavior
+
+Paragraphe:
+Most SEO tools capture only human search intent. But when ChatGPT or Claude answer questions, they perform real-time AI searches using their own queries and sources. Ignoring these queries means missing the future of AI-driven search and content discovery.
+
+Bullets:
+❌ Human-first tools like Ahrefs or SEMrush miss AI search patterns
+❌ You don’t know which websites or sources AI relies on
+❌ Your content risks being invisible to Generative Search engines
+
+Mini CTA SEO:
+Install the Chrome extension to track real-time AI search queries instantly.
+
+3️⃣ LA SOLUTION
+
+H2:
+The First Real-Time AI Keyword Extractor for Chrome
+
+Paragraphe:
+AI Keywords Chrome Extension is a lightweight, privacy-first browser tool that works silently with ChatGPT and Claude. See real-time AI search queries, track the sources AI uses, and export the data directly to your workflow.
+
+Bullets / Features:
+🔍 Instant Query Extraction: Watch AI search queries appear live as ChatGPT or Claude browses the web
+📊 Source URL Tracking: Capture exact domains, titles, and links used by AI
+💾 One-Click Export: Save data in CSV for SEO or JSON for developers
+🚀 Zero Setup: Install once, start tracking AI searches immediately
+
+4️⃣ COMMENT ÇA MARCHE
+
+H2:
+Setup and Start Tracking AI Keywords in Under 30 Seconds
+
+Step 1: Install from Chrome Web Store – Click “Add to Chrome”, installs in 5 seconds
+Step 2: Start a Chat – Open ChatGPT or Claude and ask any question requiring web search
+Step 3: Monitor Live Queries – The overlay displays all AI search queries in real-time
+Step 4: Export Data – Click ‘Export’ in the popup to save queries and sources for SEO audits or research
+
+SEO Tip: Each step subtly uses “real-time AI search queries / Chrome extension / ChatGPT & Claude”.
+
+5️⃣ FEATURES
+
+H2:
+Why SEO Professionals & Power Users Love This Chrome Extension
+
+Chrome Optimized:
+✅ Lightweight (<500KB) – No browser slowdown
+✅ Privacy-first – All data stays in Chrome
+✅ Native Chrome integration – Works on Chrome, Edge, and Brave
+✅ Auto-updates via Chrome Web Store
+
+Extraction Power:
+✅ ChatGPT + Claude support (Gemini coming Q2 2025)
+✅ Real-time AI search query capture
+✅ Source URL & page title tracking
+✅ 7-day extraction history (free)
+✅ Export to CSV for SEO or JSON for developers
+
+Premium ($4.99/mo):
+✅ Unlimited extractions
+✅ Advanced analytics dashboard
+
+6️⃣ COMPARISON: FREE VS PREMIUM
+Feature	Free Plan	Premium ($6/mo)
+Chrome Web Store Install	✅ Yes	✅ Yes
+Daily AI Search Queries	01	✅ Unlimited
+ChatGPT & Claude Support	✅ Yes	✅ Yes
+CSV Export	✅ Yes	✅ Advanced
+
+CTA micro: → Install Free Chrome Extension Now
+
+7️⃣ USE CASES
+
+H2:
+Who Benefits from This Chrome Extension?
+
+SEO Specialists:
+Master GEO (Generative Engine Optimization) by seeing the exact AI search queries your site should rank for.
+
+Prompt Engineers:
+Debug prompts by tracking ChatGPT & Claude real-time searches.
+
+Content Strategists:
+Identify content gaps by understanding which topics AI struggles to find.
+
+Digital Marketers:
+Analyze AI source preferences and brand sentiment in real-time.
+
+8️⃣ FAQ
+
+H2: Frequently Asked Questions
+
+Q: Is this an official Chrome extension?
+A: Yes, AI Keywords Extractor is verified and available on Chrome Web Store.
+
+Q: Can I track AI search queries in real-time?
+A: Yes! See live queries as ChatGPT or Claude searches the web.
+
+Q: Does it work with free ChatGPT?
+A: Works on any version with web browsing enabled; most effective on ChatGPT Plus or Claude Pro.
+
+Q: Can I export my AI search data?
+A: Yes, click 'View History' in the popup → Export to CSV or JSON (JSON requires Premium).
+
+Q: Does it work on Edge or Brave?
+A: Yes, fully compatible with Chromium-based browsers. Safari & Firefox coming 2025.
+
+Q: Is my data safe?
+A: Absolutely. All data is stored locally in Chrome; no external servers are involved.
+
+Q: Will it slow down my browser?
+A: No. Ultra-lightweight (<500KB) and only activates on ChatGPT or Claude pages.
+
+9️⃣ FINAL CTA
+
+H2: Start Tracking AI Keywords Today – Free Forever
+
+Paragraphe:
+Stop guessing what AI searches for. Gain real-time insights from ChatGPT & Claude, export data for SEO or research, and optimize content for the next generation of search engines.
+
+CTA: → Add to Chrome – Free Forever
+✓ Installs in 5 seconds
+✓ No credit card required
+✓ Free plan never expires
+✓ Upgrade to Premium anytime ($4.99/mo)

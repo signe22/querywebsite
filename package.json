@@ -1,0 +1,17 @@
+{
+  "name": "ai-keywords-landing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --port 4321",
+    "build": "astro build",
+    "preview": "astro preview --port 4321"
+  },
+  "engines": {
+    "node": ">=18.14.0"
+  },
+  "devDependencies": {
+    "astro": "latest"
+  }
+}

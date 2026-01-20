@@ -1,0 +1,929 @@
+📋 CAHIER DES CHARGES - Site Web Astro.js
+AI Keywords Extractor - Extension Chrome
+
+🎯 1. OBJECTIFS DU SITE
+Objectifs Business
+
+Générer 500+ installations/mois via SEO organique
+Convertir 5% visiteurs → clients premium (25 ventes/mois)
+Établir crédibilité et confiance (autorité marché)
+Support client (réduire emails support)
+
+Objectifs Utilisateurs
+
+Comprendre le produit en < 30 secondes
+Télécharger l'extension en 2 clics
+Trouver réponses FAQ rapidement
+Acheter premium sans friction
+
+KPIs à suivre
+
+Taux de rebond < 40%
+Temps sur page > 2 minutes
+CTR "Download" > 15%
+Conversion premium > 3%
+
+
+👥 2. PERSONAS CIBLES
+Persona 1 : SEO Professional "Marc"
+
+Âge : 28-40 ans
+Besoin : Outils efficaces pour recherche keywords
+Pain point : Perd du temps à tracker manuellement
+Budget : 50-100€/mois pour outils
+Décision : Rapide si ROI clair
+
+Persona 2 : Content Creator "Sophie"
+
+Âge : 25-35 ans
+Besoin : Inspiration sujets, tendances
+Pain point : Manque d'idées contenu
+Budget : 10-30€/mois
+Décision : Émotionnelle, design important
+
+Persona 3 : Developer/Researcher "Ahmed"
+
+Âge : 22-45 ans
+Besoin : Data analysis, export
+Pain point : APIs limitées, données manquantes
+Budget : Gratuit préféré, payera si technique solide
+Décision : Logique, veut voir code/docs
+
+
+🗺️ 3. ARCHITECTURE DU SITE
+Structure Pages (Sitemap)
+Homepage (/)
+│
+├── Features (/features)
+│   ├── For SEO Pros
+│   ├── For Content Creators
+│   └── For Researchers
+│
+├── Pricing (/pricing)
+│   ├── Free Plan
+│   ├── Monthly Plan
+│   └── Annual Plan
+│
+├── Documentation (/docs)
+│   ├── Getting Started
+│   ├── Installation Guide
+│   ├── How to Use
+│   ├── Export Data
+│   ├── FAQ
+│   └── Troubleshooting
+│
+├── Blog (/blog)
+│   ├── [Article 1: SEO with AI]
+│   ├── [Article 2: ChatGPT Keywords]
+│   └── [Article 3: Case Studies]
+│
+├── Privacy Policy (/privacy)
+├── Terms of Service (/terms)
+└── Contact (/contact)
+Navigation totale : 7 pages principales
+
+🎨 4. DESIGN SYSTEM (Bonnes pratiques)
+4.1 Palette de couleurs
+Option A : Tech/Trust (Recommandé)
+css--primary: #2563EB (Blue 600) - CTA, liens
+--primary-dark: #1E40AF (Blue 700) - Hover
+--secondary: #8B5CF6 (Purple 500) - Accents
+--accent: #10B981 (Green 500) - Success, badges
+--bg-primary: #FFFFFF - Fond principal
+--bg-secondary: #F9FAFB (Gray 50) - Sections alt
+--text-primary: #111827 (Gray 900) - Texte
+--text-secondary: #6B7280 (Gray 500) - Sous-titres
+--border: #E5E7EB (Gray 200) - Bordures
+Option B : Modern/Bold
+css--primary: #6366F1 (Indigo 500)
+--secondary: #EC4899 (Pink 500)
+--accent: #14B8A6 (Teal 500)
+Règles :
+
+Maximum 3-4 couleurs principales
+Contraste WCAG AA minimum (4.5:1 texte)
+Dark mode : inverser bg/text
+
+
+4.2 Typographie
+System Fonts (Performance optimale)
+css--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 
+             'Segoe UI', Roboto, sans-serif;
+--font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+Échelle typographique (Modular Scale 1.25)
+css--text-xs: 0.75rem (12px)    - Labels, badges
+--text-sm: 0.875rem (14px)   - Body small
+--text-base: 1rem (16px)     - Body
+--text-lg: 1.125rem (18px)   - Lead text
+--text-xl: 1.25rem (20px)    - H4
+--text-2xl: 1.5rem (24px)    - H3
+--text-3xl: 1.875rem (30px)  - H2
+--text-4xl: 2.25rem (36px)   - H1
+--text-5xl: 3rem (48px)      - Hero title
+Line Heights
+css--leading-tight: 1.25   - Headlines
+--leading-normal: 1.5   - Body text
+--leading-relaxed: 1.75 - Long-form content
+Font Weights
+css--font-normal: 400
+--font-medium: 500
+--font-semibold: 600
+--font-bold: 700
+
+4.3 Spacing System (8px base)
+css--space-1: 0.25rem (4px)
+--space-2: 0.5rem (8px)
+--space-3: 0.75rem (12px)
+--space-4: 1rem (16px)
+--space-6: 1.5rem (24px)
+--space-8: 2rem (32px)
+--space-12: 3rem (48px)
+--space-16: 4rem (64px)
+--space-24: 6rem (96px)
+--space-32: 8rem (128px)
+Règle d'or : Tous les espacements multiples de 4px ou 8px
+
+4.4 Layout & Grid
+Container Max-widths
+css--container-sm: 640px   - Single column content
+--container-md: 768px   - Forms, narrow content
+--container-lg: 1024px  - Standard pages
+--container-xl: 1280px  - Wide layouts
+--container-2xl: 1536px - Hero sections
+Responsive Breakpoints
+css--mobile: 640px (sm)
+--tablet: 768px (md)
+--laptop: 1024px (lg)
+--desktop: 1280px (xl)
+--wide: 1536px (2xl)
+```
+
+**Grid System**
+- 12 colonnes fluides
+- Gap : 24px (desktop), 16px (mobile)
+- Padding container : 32px (desktop), 16px (mobile)
+
+---
+
+### **4.5 Composants UI Standards**
+
+**Buttons**
+```
+Primary Button:
+- Background: var(--primary)
+- Padding: 12px 24px
+- Border-radius: 8px
+- Font-weight: 600
+- Hover: transform scale(1.02) + shadow
+- Transition: 200ms ease
+
+Secondary Button:
+- Border: 2px solid var(--primary)
+- Background: transparent
+- Color: var(--primary)
+
+Ghost Button:
+- Background: transparent
+- No border
+- Hover: background-opacity 10%
+```
+
+**Cards**
+```
+Standard Card:
+- Background: white
+- Border: 1px solid var(--border)
+- Border-radius: 12px
+- Padding: 24px
+- Shadow: 0 1px 3px rgba(0,0,0,0.1)
+- Hover: shadow-md + translateY(-2px)
+```
+
+**Inputs**
+```
+Text Input:
+- Height: 44px (touch-friendly)
+- Padding: 12px 16px
+- Border: 1px solid var(--border)
+- Border-radius: 8px
+- Focus: border-primary + ring shadow
+
+4.6 Iconographie
+Library : Lucide Icons (open-source, cohérente)
+Tailles standards
+css--icon-xs: 16px
+--icon-sm: 20px
+--icon-md: 24px
+--icon-lg: 32px
+--icon-xl: 48px
+```
+
+**Style :** Stroke (outline), pas filled
+
+---
+
+## 📱 **5. PAGES DÉTAILLÉES**
+
+### **5.1 HOMEPAGE (/)**
+
+#### **Section 1 : Hero (Above the fold)**
+
+**Objectif :** Accrocher en 3 secondes
+
+**Layout :**
+```
+┌─────────────────────────────────────┐
+│  [Logo]  Features Pricing Docs Blog │ ← Navigation
+├─────────────────────────────────────┤
+│                                     │
+│     Extract AI Keywords From        │ ← H1 (text-5xl)
+│     ChatGPT & Claude Automatically  │
+│                                     │
+│   Track search queries, analyze     │ ← Subtitle (text-xl)
+│   patterns, export data for SEO     │
+│                                     │
+│  [Download Free] [View Demo]        │ ← CTAs
+│                                     │
+│  ⭐⭐⭐⭐⭐ 4.8/5 (500+ reviews)      │ ← Social proof
+│                                     │
+│      [Hero Image/Demo Video]        │ ← Visual
+│                                     │
+└─────────────────────────────────────┘
+```
+
+**Éléments requis :**
+- H1 avec keywords : "AI Keywords", "ChatGPT", "Claude"
+- CTA primaire : "Download Free" (Chrome badge)
+- CTA secondaire : "View Demo" (video modal)
+- Social proof : stars + count
+- Hero visual : Screenshot ou demo animé
+- Scroll indicator (subtle)
+
+**Bonnes pratiques :**
+- Hero height : 80-90vh
+- CTA above fold (visible sans scroll)
+- Contraste élevé pour lisibilité
+- Animation subtile au load (fade-in)
+
+---
+
+#### **Section 2 : Social Proof**
+
+**Layout : Logo bar**
+```
+┌─────────────────────────────────────┐
+│  Trusted by 1,000+ professionals at │
+│  [Logo1] [Logo2] [Logo3] [Logo4]    │ ← Logos clients/partenaires
+└─────────────────────────────────────┘
+```
+
+**Alternative si pas de logos :**
+```
+  500+ Downloads  |  4.8★ Rating  |  50+ Reviews
+```
+
+---
+
+#### **Section 3 : Features (Bento Grid)**
+
+**Objectif :** Montrer valeur principale
+
+**Layout : 3-column grid (responsive 1-col mobile)**
+```
+┌──────────┬──────────┬──────────┐
+│  [Icon]  │  [Icon]  │  [Icon]  │
+│          │          │          │
+│ Feature 1│ Feature 2│ Feature 3│
+│  Title   │  Title   │  Title   │
+│          │          │          │
+│ Short    │ Short    │ Short    │
+│ desc     │ desc     │ desc     │
+└──────────┴──────────┴──────────┘
+```
+
+**Features à afficher :**
+1. **Auto Extract** - Icon: Zap
+   "Automatically captures keywords from ChatGPT & Claude searches"
+
+2. **Export Data** - Icon: Download
+   "Export to CSV/JSON for analysis in Excel or your tools"
+
+3. **Real-time Tracking** - Icon: Activity
+   "See search queries as they happen, never miss a keyword"
+
+4. **Multi-Platform** - Icon: Layers
+   "Works with ChatGPT (GPT-4) and Claude AI seamlessly"
+
+5. **Privacy First** - Icon: Shield
+   "Your data stays local, we never see or store your searches"
+
+6. **Advanced Analytics** - Icon: BarChart (Premium badge)
+   "Get insights on keyword frequency and search patterns"
+
+**Bonnes pratiques :**
+- Icons colorés (brand colors)
+- Hover effect : scale + shadow
+- Max 6 features (3+3 rows)
+- Badge "Premium" si applicable
+
+---
+
+#### **Section 4 : How It Works**
+
+**Objectif :** Réduire friction cognitive
+
+**Layout : Stepped process**
+```
+    1              2              3
+ [Install]  →   [Use AI]    →  [Export]
+ 
+ Download      Chat with       Access your
+ extension     ChatGPT/Claude  keyword data
+```
+
+**Format alternatif : Video demo**
+- 30-60 secondes
+- No sound needed (captions)
+- Show real usage
+
+---
+
+#### **Section 5 : Use Cases (Tabs ou Cards)**
+
+**Objectif :** Résonner avec chaque persona
+
+**Layout : 3 tabs**
+```
+[For SEO] [For Content] [For Research]
+
+┌─────────────────────────────────────┐
+│  Discover How AI Searches           │
+│                                     │
+│  "See exactly what keywords ChatGPT │
+│   uses when researching your niche  │
+│   topics. Perfect for finding       │
+│   content gaps and SEO opportunities"│
+│                                     │
+│  [Screenshot SEO dashboard]         │
+│                                     │
+│  ✓ Keyword gap analysis             │
+│  ✓ Competitor research              │
+│  ✓ Content ideation                 │
+└─────────────────────────────────────┘
+```
+
+**3 use cases :**
+1. **SEO Professionals** - Keyword research automation
+2. **Content Creators** - Topic discovery
+3. **Researchers** - Data collection
+
+---
+
+#### **Section 6 : Pricing Preview**
+
+**Objectif :** Teaser, pas full pricing
+
+**Layout : 2-column comparison**
+```
+┌────────────┬────────────┐
+│   FREE     │  PREMIUM   │
+│            │            │
+│  $0/mo     │  $4.99/mo  │
+│            │            │
+│ 50 kw/day  │ Unlimited  │
+│ 7d history │ Forever    │
+│ CSV export │ CSV+JSON   │
+│            │ Analytics  │
+│            │            │
+│ [Download] │ [Go Pro]   │
+└────────────┴────────────┘
+```
+
+**CTA :** "See Full Pricing →"
+
+---
+
+#### **Section 7 : Testimonials**
+
+**Layout : Card carousel (3 visible)**
+```
+┌──────────────────────────────────┐
+│  "Game changer for my SEO work.  │
+│   I discover 10x more keywords   │
+│   than manual research"          │
+│                                  │
+│  ⭐⭐⭐⭐⭐                         │
+│  - Sarah M., SEO Consultant      │
+└──────────────────────────────────┘
+```
+
+**Minimum 3 testimonials** avec :
+- Quote (1-2 phrases)
+- Rating stars
+- Name + title
+- Photo (optionnel mais mieux)
+
+---
+
+#### **Section 8 : FAQ (Accordion)**
+
+**Layout : Single column, expandable**
+```
+❯ How does it work?
+❯ Is my data private?
+❯ What AI platforms are supported?
+❯ Can I export my data?
+❯ Do I need ChatGPT Plus?
+```
+
+**6-8 questions essentielles**
+
+---
+
+#### **Section 9 : Final CTA**
+
+**Layout : Centered, bold**
+```
+┌─────────────────────────────────────┐
+│                                     │
+│   Ready to Extract AI Keywords?     │
+│                                     │
+│   Join 1,000+ professionals using   │
+│   AI Keywords Extractor             │
+│                                     │
+│   [Download for Free]               │
+│   [View Pricing]                    │
+│                                     │
+└─────────────────────────────────────┘
+```
+
+**Background :** Gradient ou image subtile
+
+---
+
+#### **Footer**
+
+**Layout : 4 columns**
+```
+┌─────────┬─────────┬─────────┬─────────┐
+│ Product │ Company │ Legal   │ Connect │
+├─────────┼─────────┼─────────┼─────────┤
+│Features │About    │Privacy  │Twitter  │
+│Pricing  │Blog     │Terms    │GitHub   │
+│Docs     │Contact  │         │Email    │
+│FAQ      │         │         │         │
+└─────────┴─────────┴─────────┴─────────┘
+
+      © 2025 AI Keywords Extractor
+```
+
+---
+
+### **5.2 FEATURES PAGE (/features)**
+
+**Sections :**
+1. Hero : "Everything You Need for AI Keyword Research"
+2. Feature grid : 12+ features détaillées avec icons
+3. Feature spotlight : 3-4 features principales avec screenshots
+4. Comparison table : Free vs Premium
+5. Platform support : ChatGPT + Claude logos + specs
+6. Integrations : Export formats, tools compatibles
+7. CTA : Download
+
+---
+
+### **5.3 PRICING PAGE (/pricing)**
+
+**Layout : 3-column cards (responsive stack)**
+```
+┌─────────┬──────────┬─────────┐
+│  FREE   │ MONTHLY  │ ANNUAL  │
+│         │   ★      │   ⭐    │ ← Badges
+│ $0      │ $4.99/mo │ $49/yr  │
+│         │          │ Save 17%│
+│         │          │         │
+│ Feature │ Feature  │ Feature │
+│ List    │ List     │ List    │
+│         │          │         │
+│[Start]  │[Buy Now] │[Buy Now]│
+└─────────┴──────────┴─────────┘
+```
+
+**Sections additionnelles :**
+- FAQ pricing
+- Money-back guarantee badge
+- Payment methods (Gumroad logo)
+- "Questions? Contact us"
+
+**Bonnes pratiques :**
+- Card "Monthly" highlighted (most popular)
+- Toggle annual/monthly
+- Show $ saved on annual
+- Clear feature differentiation
+
+---
+
+### **5.4 DOCUMENTATION (/docs)**
+
+**Layout : Sidebar + Content**
+```
+┌────────┬──────────────────────┐
+│        │                      │
+│ TOC    │   Content Area       │
+│        │                      │
+│Getting │ # Getting Started    │
+│Started │                      │
+│        │ Step 1: Install      │
+│Install │ ...                  │
+│        │                      │
+│Usage   │ [Screenshots]        │
+│        │                      │
+│Export  │                      │
+│        │                      │
+│FAQ     │                      │
+└────────┴──────────────────────┘
+```
+
+**Pages docs obligatoires :**
+1. Getting Started
+2. Installation Guide (avec GIFs)
+3. How to Use (screenshots step-by-step)
+4. Export Data (formats, exemples)
+5. Premium Features
+6. FAQ
+7. Troubleshooting
+8. Changelog
+
+**Bonnes pratiques :**
+- Search bar en haut
+- Syntax highlighting pour code examples
+- Copy button sur code blocks
+- "Was this helpful?" feedback
+- Table of contents automatique
+- Dark mode toggle
+
+---
+
+### **5.5 BLOG (/blog)**
+
+**Layout : Card grid (3 columns)**
+```
+┌────────────┬────────────┬────────────┐
+│ [Featured] │            │            │
+│  Post 1    │  Post 2    │  Post 3    │
+│            │            │            │
+│ [Image]    │ [Image]    │ [Image]    │
+│ Title      │ Title      │ Title      │
+│ Excerpt    │ Excerpt    │ Excerpt    │
+│ 5 min read │ 3 min read │ 7 min read │
+└────────────┴────────────┴────────────┘
+```
+
+**Catégories blog recommandées :**
+- SEO Tips
+- AI Tools
+- Case Studies
+- Product Updates
+- Tutorials
+
+**Structure article :**
+- Hero image
+- Title (H1)
+- Author + Date + Read time
+- Table of contents
+- Content (H2, H3 structure)
+- Code examples si applicable
+- CTA bottom : "Try the extension"
+- Related posts
+
+---
+
+## ⚡ **6. PERFORMANCE & TECHNIQUE**
+
+### **6.1 Astro.js Configuration**
+
+**Pourquoi Astro :**
+- ✅ Zero JS by default (ultra rapide)
+- ✅ Perfect Lighthouse scores
+- ✅ SEO-friendly (SSG)
+- ✅ Markdown support (blog)
+- ✅ Component islands (interactivité ciblée)
+
+**Structure projet recommandée :**
+```
+/
+├── src/
+│   ├── components/
+│   │   ├── Header.astro
+│   │   ├── Footer.astro
+│   │   ├── Hero.astro
+│   │   ├── FeatureCard.astro
+│   │   ├── PricingCard.astro
+│   │   └── Button.astro
+│   │
+│   ├── layouts/
+│   │   ├── BaseLayout.astro
+│   │   ├── DocsLayout.astro
+│   │   └── BlogLayout.astro
+│   │
+│   ├── pages/
+│   │   ├── index.astro (homepage)
+│   │   ├── features.astro
+│   │   ├── pricing.astro
+│   │   ├── docs/
+│   │   │   └── [...slug].astro
+│   │   ├── blog/
+│   │   │   ├── index.astro
+│   │   │   └── [slug].astro
+│   │   ├── privacy.astro
+│   │   └── terms.astro
+│   │
+│   ├── content/
+│   │   ├── docs/
+│   │   │   ├── getting-started.md
+│   │   │   └── installation.md
+│   │   └── blog/
+│   │       └── post-1.md
+│   │
+│   ├── styles/
+│   │   └── global.css
+│   │
+│   └── assets/
+│       ├── images/
+│       └── icons/
+│
+├── public/
+│   ├── favicon.svg
+│   └── robots.txt
+│
+└── astro.config.mjs
+
+6.2 Optimisations Performance
+Objectifs Lighthouse :
+
+Performance : 95+
+Accessibility : 100
+Best Practices : 100
+SEO : 100
+
+Techniques :
+Images :
+astro---
+import { Image } from 'astro:assets';
+import heroImg from '../assets/hero.png';
+---
+
+<Image 
+  src={heroImg} 
+  alt="AI Keywords Extractor Dashboard"
+  width={1200}
+  height={630}
+  format="webp"
+  loading="lazy" (eager pour hero)
+/>
+Fonts :
+
+Utiliser system fonts OU
+Self-host Google Fonts avec fontsource
+Preload critical fonts
+font-display: swap
+
+CSS :
+
+Inline critical CSS
+Defer non-critical
+Purge unused CSS (automatique avec Astro)
+Use CSS variables (pas de runtime JS)
+
+JavaScript :
+
+Minimal JS (Astro philosophy)
+Use client:load uniquement si nécessaire
+Préférer client:visible pour below fold
+Pas de jQuery, React global (islands only)
+
+
+6.3 SEO Technical
+Meta Tags (dans BaseLayout.astro) :
+astro---
+const { title, description, image } = Astro.props;
+---
+
+<head>
+  <!-- Primary Meta Tags -->
+  <title>{title} | AI Keywords Extractor</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={image} />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={Astro.url} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={image} />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href={Astro.url} />
+  
+  <!-- Sitemap -->
+  <link rel="sitemap" href="/sitemap-index.xml" />
+</head>
+Structured Data (JSON-LD) :
+javascript// Pour homepage
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AI Keywords Extractor",
+  "description": "Extract keywords from ChatGPT and Claude",
+  "applicationCategory": "BrowserExtension",
+  "operatingSystem": "Chrome",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "500"
+  }
+}
+Sitemap automatique :
+javascript// astro.config.mjs
+import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
+
+export default defineConfig({
+  site: 'https://ai-keywords-extractor.com',
+  integrations: [sitemap()]
+});
+```
+
+**robots.txt :**
+```
+User-agent: *
+Allow: /
+
+Sitemap: https://ai-keywords-extractor.com/sitemap-index.xml
+
+6.4 Accessibilité (A11y)
+Standards WCAG 2.1 AA :
+Contraste :
+
+Texte normal : 4.5:1 minimum
+Texte large (18px+) : 3:1 minimum
+Testeur : WebAIM Contrast Checker
+
+Navigation clavier :
+
+Tab order logique
+Focus visible (outline)
+Skip to content link
+Tous les interactifs accessibles
+
+ARIA labels :
+astro<button aria-label="Download extension">
+  <DownloadIcon />
+</button>
+
+<nav aria-label="Primary navigation">
+  ...
+</nav>
+Images :
+
+Alt text descriptif (pas "image" ou "photo")
+Décoratifs : alt=""
+Complexes : longdesc ou caption
+
+Forms :
+
+Label pour chaque input
+Error messages clairs
+Required indicators
+
+
+6.5 Analytics & Tracking
+Google Analytics 4 :
+astro<!-- Dans BaseLayout.astro -->
+{import.meta.env.PROD && (
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+)}
+Events à tracker :
+
+Click "Download Extension"
+Click "Buy Premium"
+Video play
+Scroll depth (25%, 50%, 75%, 100%)
+Time on page
+CTA clicks
+
+Alternative privacy-friendly :
+
+Plausible Analytics (RGPD friendly)
+Umami (open-source, self-hosted)
+
+
+🎬 7. ANIMATIONS & MICRO-INTERACTIONS
+Principes :
+
+Subtil, pas distrayant
+Purposeful (guide l'attention)
+Performance-friendly (CSS > JS)
+Respecter prefers-reduced-motion
+
+Animations recommandées :
+Page load :
+css@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+  animation: fadeIn 0.6s ease-out;
+}
+Scroll reveal :
+
+Observer API
+Fade in elements as they enter viewport
+Library : AOS (Animate On Scroll) lightweight
+
+Hover states :
+cssbutton {
+  transition: all 200ms ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+Loading states :
+
+Skeleton screens (pas spinners)
+Progress indicators
+Optimistic UI
+
+
+📱 8. RESPONSIVE DESIGN
+Mobile-First Approach
+Breakpoints :
+css/* Mobile: 320px - 640px (default) */
+
+@media (min-width: 640px) {
+  /* Tablet */
+}
+
+@media (min-width: 1024px) {
+  /* Laptop */
+}
+
+@media (min-width: 1280px) {
+  /* Desktop */
+}
+Mobile Optimizations :
+Navigation :
+
+Hamburger menu < 768px
+Full nav >= 768px
+Smooth slide-in animation
+
+Typography :
+css/* Mobile */
+h1 { font-size: 2rem; }
+
+/* Desktop */
+@media (min-width: 1024px) {
+  h1 { font-size: 3rem; }
+}
+Spacing :
+css.section {
+  padding: 3rem 1rem; /* Mobile */
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 6rem 2rem; /* Desktop */
+  }
+}
+Touch targets :
+
+Minimum 44x44px (Apple HIG)
+Spacing entre boutons adjacents
+
+Images :
+
+Art direction (différentes crops)
+srcset pour résolutions multiples
+Lazy loading

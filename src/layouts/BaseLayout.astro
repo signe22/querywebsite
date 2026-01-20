@@ -1,0 +1,62 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = 'AI Keywords – Chrome Extension', description = 'Reveal, track, and export real-time AI search queries from ChatGPT & Claude. Lightweight, privacy-first Chrome extension.' } = Astro.props;
+import "../styles/global.css";
+const site = Astro.site?.toString() ?? '';
+const canonical = site ? new URL(Astro.url.pathname, site).toString() : Astro.url.pathname;
+const year = new Date().getFullYear();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={canonical} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0b1220" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json">{JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'AI Keywords',
+      url: site || undefined,
+      description,
+    })}</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="container header-inner">
+        <div class="brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="12" fill="#111827"/><path d="M20 44h24l-12-24z" fill="#60a5fa"/><circle cx="32" cy="44" r="4" fill="#f9fafb"/></svg>
+          <span>AI Keywords</span>
+        </div>
+        <nav class="nav-cta">
+          <a href="#install" class="btn">Add to Chrome</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>© {year} AI Keywords</div>
+        <div class="muted">Static, fast, and private.</div>
+      </div>
+    </footer>
+  </body>
+</html>
