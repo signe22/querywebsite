@@ -78,3 +78,7 @@ footer { border-top: 1px solid var(--border); margin-top: 40px; }
 details + details { margin-top: 12px; }
 summary { font-weight: 700; cursor: pointer; }
 small.note { display:block; margin-top: 12px; color: var(--muted); }
+.meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; }
+section h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+section h3 { margin-top: 2rem; margin-bottom: 0.8rem; }
+section ul { margin-bottom: 1.5rem; }
