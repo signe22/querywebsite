@@ -33,6 +33,16 @@ const year = new Date().getFullYear();
       url: site || undefined,
       description,
     })}</script>
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-YFJPHGEF8T"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-YFJPHGEF8T');
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
